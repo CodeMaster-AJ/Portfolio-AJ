@@ -1,0 +1,15 @@
+/* Custom fix for blurry profile image in profile card */
+.profile-image-placeholder img {
+    image-rendering: auto;
+    /* Prevent upscaling if image is smaller than container */
+    max-width: 100%;
+    max-height: 100%;
+    width: 128px;
+    height: 128px;
+    /* Sharpen on Chrome/Edge */
+    image-rendering: -webkit-optimize-contrast;
+    /* Sharpen on Firefox */
+    image-rendering: crisp-edges;
+    /* Remove blur from border */
+    filter: none;
+}
