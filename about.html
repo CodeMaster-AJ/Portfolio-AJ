@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AJ - The Origin Story</title>
+    <meta name="description" content="The chaotic journey of Amandeep Singh Jadhav (AJ) - From 650K YouTube subscriber to developer building epic stuff.">
+    <meta name="keywords" content="AJ origin story, Amandeep Singh Jadhav, YouTuber to developer, Akal University, digital transformation">
+    <meta name="author" content="Amandeep Singh Jadhav (AJ)">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-cyan': '#00ffff',
+                        'neon-indigo': '#6366f1',
+                        'neon-violet': '#8b5cf6',
+                        'glass-bg': 'rgba(255, 255, 255, 0.1)',
+                        'glass-border': 'rgba(255, 255, 255, 0.2)',
+                    },
+                    fontFamily: {
+                        'primary': ['Segoe UI', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    backdropBlur: {
+                        'glass': '10px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white font-primary overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-glass-bg backdrop-blur-glass border-b border-glass-border">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-neon-cyan glow-text">
+                    <i class="fas fa-code mr-2"></i>AJ
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link active">About</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-neon-cyan transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 nav-link">Home</a>
+                <a href="about.html" class="block py-2 nav-link active">About</a>
+                <a href="projects.html" class="block py-2 nav-link">Projects</a>
+                <a href="blog.html" class="block py-2 nav-link">Blog</a>
+                <a href="gallery.html" class="block py-2 nav-link">Gallery</a>
+                <a href="contact.html" class="block py-2 nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-neon-indigo glow-text">
+                    <i class="fas fa-mask mr-4"></i>The Origin Story
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                    Not a comeback. <span class="text-neon-cyan font-bold">A takeover.</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Profile Card -->
+                    <div class="glass-card p-8 scroll-reveal">
+                        <div class="text-center mb-8">
+                            <div class="profile-image-placeholder mx-auto mb-6">
+  <a href="https://postimages.org/" target="_blank">
+    <img src="https://i.postimg.cc/8cBC8WmZ/My-profile-pic.jpg" alt="My-profile-pic" class="rounded-full w-32 h-32 object-cover border-4 border-neon-cyan shadow-lg" />
+  </a>
+</div>
+
+                            <h2 class="text-3xl font-bold mb-2 text-neon-cyan">AJ</h2>
+                            <p class="text-lg text-gray-300 mb-4">Amandeep Singh Jadhav</p>
+                            <div class="flex justify-center space-x-4">
+                                <a href="https://github.com/CodeMaster-AJ" target="_blank" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/aj" target="_blank" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="mailto:contact@example.com" class="social-link">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- College Info -->
+                        <div class="bg-gray-800/50 rounded-lg p-6 mb-6">
+                            <h3 class="text-xl font-bold mb-4 text-neon-indigo">
+                                <i class="fas fa-graduation-cap mr-2"></i>Education
+                            </h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-university text-neon-cyan mr-3"></i>
+                                    <div>
+                                        <p class="font-semibold">Computer Science</p>
+                                        <p class="text-sm text-gray-400">Akal University</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-calendar text-neon-violet mr-3"></i>
+                                    <div>
+                                        <p class="font-semibold">Expected Graduation</p>
+                                        <p class="text-sm text-gray-400">2028</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Status -->
+                        <div class="text-center">
+                            <span class="inline-flex items-center px-4 py-2 bg-green-500/20 text-green-300 rounded-full">
+                                <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                                Available for Projects
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- About Content -->
+                    <div class="space-y-8 scroll-reveal">
+                        <div>
+                            <h2 class="text-3xl font-bold mb-6 text-neon-violet glow-text">
+                                <i class="fas fa-lightbulb mr-3"></i>My Story
+                            </h2>
+                            <div class="space-y-4 text-gray-300 leading-relaxed">
+                                <p>
+                                    Hi, I’m Amandeep Singh Jadhav — but most people just call me AJ.
+I’m a BTech AIML student who didn’t come from a perfect background or big resources. My journey started with confusion, failure, and a lot of self-doubt.
+                                </p>
+                                <p>
+                                    But I kept going — learning things one step at a time.
+Now I’m focused on improving every day, exploring tech, building projects, and figuring things out as I grow.
+                                <p>
+                                   I’m not perfect. I’m just real.
+And this is my journey — no tags, no titles.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-neon-cyan">
+                                <i class="fas fa-heart mr-2"></i>What I Love
+                            </h3>
+                            <ul class="space-y-2 text-gray-300">
+                                <li class="flex items-center">
+                                    <i class="fas fa-code text-neon-cyan mr-3"></i>
+                                    Building scalable web applications
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-puzzle-piece text-neon-indigo mr-3"></i>
+                                    Solving complex algorithmic problems
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-users text-neon-violet mr-3"></i>
+                                    Collaborating with amazing teams
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-rocket text-neon-cyan mr-3"></i>
+                                    Learning cutting-edge technologies
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Achievements Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-neon-cyan subtle-glow scroll-reveal">
+                <i class="fas fa-award mr-3"></i>Certifications & Achievements
+            </h2>
+            
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- YouTube Achievement -->
+                <div class="glass-card p-6 text-center scroll-reveal floating-3d">
+                    <div class="mb-4">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mb-4">
+                            <i class="fab fa-youtube text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-red-400 mb-2">YouTube Creator</h3>
+                        <p class="text-gray-400 mb-3">650K+ Subscribers Achievement</p>
+                        <div class="text-sm text-gray-500">Content Creation Excellence</div>
+                    </div>
+                </div>
+                
+                <!-- Academic Achievement -->
+                <!-- <div class="glass-card p-6 text-center scroll-reveal floating-3d" style="animation-delay: 1s;">
+                    <div class="mb-4">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-graduation-cap text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-400 mb-2">BTech CSE</h3>
+                        <p class="text-gray-400 mb-3">AI/ML Specialization</p>
+                        <div class="text-sm text-gray-500">Akal University, Punjab</div>
+                    </div>
+                </div> -->
+                
+                <!-- Design Certification -->
+                <div class="glass-card p-6 text-center scroll-reveal floating-3d" style="animation-delay: 2s;">
+                    <div class="mb-4">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-palette text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-pink-400 mb-2">Canva Pro Designer</h3>
+                        <p class="text-gray-400 mb-3">Advanced Design Skills</p>
+                        <div class="text-sm text-gray-500">Professional Level</div>
+                    </div>
+                </div>
+                
+                <!-- Development Skills -->
+                <!-- <div class="glass-card p-6 text-center scroll-reveal floating-3d" style="animation-delay: 3s;">
+                    <div class="mb-4">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-code text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-green-400 mb-2">Full Stack Development</h3>
+                        <p class="text-gray-400 mb-3">Modern Web Technologies</p>
+                        <div class="text-sm text-gray-500">Self-Taught Expert</div>
+                    </div>
+                </div> -->
+                
+                <!-- Startup Achievement -->
+                <!-- <div class="glass-card p-6 text-center scroll-reveal floating-3d" style="animation-delay: 4s;">
+                    <div class="mb-4">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-rocket text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-orange-400 mb-2">Startup Co-Founder</h3>
+                        <p class="text-gray-400 mb-3">Buyzzle & UniBuddy</p>
+                        <div class="text-sm text-gray-500">Entrepreneurial Leadership</div>
+                    </div>
+                </div> -->
+                
+                <!-- Content Writing -->
+                <div class="glass-card p-6 text-center scroll-reveal floating-3d" style="animation-delay: 5s;">
+                    <div class="mb-4">
+                        <div class="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-pen-fancy text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-cyan-400 mb-2">SEO Content Writer</h3>
+                        <p class="text-gray-400 mb-3">Digital Marketing Expert</p>
+                        <div class="text-sm text-gray-500">Professional Experience</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Achievement Stats -->
+            <div class="max-w-4xl mx-auto mt-16">
+                <div class="glass-card p-8 scroll-reveal">
+                    <h3 class="text-2xl font-bold text-center mb-8 text-neon-violet subtle-glow">
+                        <i class="fas fa-chart-line mr-2"></i>Achievement Highlights
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                        <div>
+                            <div class="text-3xl font-bold text-neon-cyan mb-2">650K+</div>
+                            <div class="text-sm text-gray-400">YouTube Subscribers</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-neon-indigo mb-2"></div>
+                            <div class="text-sm text-gray-400">Startups Founded</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-neon-violet mb-2">100+</div>
+                            <div class="text-sm text-gray-400">Design Projects</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-neon-cyan mb-2">24/7</div>
+                            <div class="text-sm text-gray-400">Learning Mode</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-neon-cyan glow-text scroll-reveal">
+                <i class="fas fa-cogs mr-3"></i>Skills & Technologies
+            </h2>
+            
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Frontend -->
+                <div class="glass-card p-8 scroll-reveal">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-palette text-4xl text-neon-cyan mb-4"></i>
+                        <h3 class="text-2xl font-bold text-neon-cyan">Frontend</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>React</span>
+                                <span class="text-neon-cyan">50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>JavaScript</span>
+                                <span class="text-neon-cyan">45%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 45%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>HTML/CSS</span>
+                                <span class="text-neon-cyan">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Vue.js</span>
+                                <span class="text-neon-cyan">15%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 15%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="glass-card p-8 scroll-reveal">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-server text-4xl text-neon-indigo mb-4"></i>
+                        <h3 class="text-2xl font-bold text-neon-indigo">Backend</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Node.js</span>
+                                <span class="text-neon-indigo">48%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress bg-neon-indigo" style="width: 48%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Python</span>
+                                <span class="text-neon-indigo">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress bg-neon-indigo" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Express.js</span>
+                                <span class="text-neon-indigo">25%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress bg-neon-indigo" style="width: 25%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>FastAPI</span>
+                                <span class="text-neon-indigo">10%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress bg-neon-indigo" style="width: 10%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database & Tools -->
+                <div class="glass-card p-8 scroll-reveal md:col-span-2 lg:col-span-1">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-database text-4xl text-neon-violet mb-4"></i>
+                        <h3 class="text-2xl font-bold text-neon-violet">Database & Tools</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>MongoDB</span>
+                                <span class="text-neon-violet">35%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress bg-neon-violet" style="width: 35%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>PostgreSQL</span>
+                                <span class="text-neon-violet">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress bg-neon-violet" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>Git</span>
+                                <span class="text-neon-violet">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress bg-neon-violet" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-1">
+                                <span>AWS</span>
+                                <span class="text-neon-violet">5%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress bg-neon-violet" style="width: 5%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-neon-violet glow-text scroll-reveal">
+                <i class="fas fa-briefcase mr-3"></i>Experience & Journey
+            </h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="timeline">
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-marker bg-neon-cyan"></div>
+                        <div class="timeline-content glass-card p-6">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-xl font-bold text-neon-cyan">🎥 YouTube Content Creator</h3>
+                                <span class="text-sm text-gray-400">2020 – 2022</span>
+                            </div>
+                            <p class="text-gray-300 mb-3">Started a YouTube channel with basic tech, gaming, and motivational content.</p>
+                            <p class="text-gray-400">
+                                Learned storytelling, editing, and connecting with people — this was my first exposure to the digital world and creating something of my own.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-marker bg-neon-indigo"></div>
+                        <div class="timeline-content glass-card p-6">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-xl font-bold text-neon-indigo">🎨 Freelance Graphic Designer</h3>
+                                <span class="text-sm text-gray-400">2021 – 2023</span>
+                            </div>
+                            <p class="text-gray-300 mb-3">Explored graphic design through Canva, Photoshop, and mobile tools.</p>
+                            <p class="text-gray-400">
+                                Created logos, posts, and thumbnails for small creators and college events. Built a strong sense of visual storytelling and creativity — still using it in my current content.
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item scroll-reveal">
+                        <div class="timeline-marker bg-neon-violet"></div>
+                        <div class="timeline-content glass-card p-6">
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                                <h3 class="text-xl font-bold text-neon-violet">🎓 BTech AIML Student – Akal University</h3>
+                                <span class="text-sm text-gray-400">2025 – Present</span>
+                            </div>
+                            <p class="text-gray-300 mb-3">Left my hometown for the first time to study Artificial Intelligence & Machine Learning.</p>
+                            <p class="text-gray-400">
+                                Started rebuilding from scratch — learning coding (C++, Python), logic, DSA, DBMS, OOP, and math for ML.
+Actively working on AI-based startup ideas and real-world projects like Buyzzle (AI shopping) and UniBuddy (student help system).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="glass-card p-8 md:p-12 text-center max-w-4xl mx-auto scroll-reveal">
+                <h2 class="text-4xl font-bold mb-6 text-neon-cyan glow-text">
+                    <i class="fas fa-handshake mr-3"></i>Let's Connect
+                </h2>
+                <p class="text-lg text-gray-300 mb-8">
+                    Interested in working together or just want to say hello? I'd love to hear from you!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="glass-button">
+                        <i class="fas fa-paper-plane mr-2"></i>Get in Touch
+                    </a>
+                    <a href="projects.html" class="glass-button-secondary">
+                        <i class="fas fa-code mr-2"></i>View My Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-neon-cyan glow-text mb-2">
+                        <i class="fas fa-code mr-2"></i>AJ
+                    </div>
+                    <p class="text-gray-400">Code. Build. Repeat.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/CodeMaster-AJ" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/aj" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <!-- <a href="https://twitter.com/aj" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a> -->
+                    <a href="mailto:aj.auts2024@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-gray-800">
+                <p class="text-gray-400">
+                    &copy; 2025 AJ. All rights reserved. | Built with ❤️ and modern web technologies
+                </p>
+                <p class="text-sm text-gray-500 mt-2">
+                    Press <kbd class="px-2 py-1 bg-gray-800 rounded text-neon-cyan">J</kbd> to open terminal
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Terminal Popup -->
+    <div id="terminal-popup" class="terminal-popup hidden">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="terminal-btn close" id="terminal-close"></span>
+                    <span class="terminal-btn minimize"></span>
+                    <span class="terminal-btn maximize"></span>
+                </div>
+                <div class="terminal-title">Terminal - AJ's Portfolio</div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-line">
+                    <span class="terminal-prompt">visitor@aj-portfolio:~$</span>
+                    <span class="terminal-cursor"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/special-effects.js"></script>
+</body>
+</html>

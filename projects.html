@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - AJ's Portfolio | CodeMaster-AJ</title>
+    <meta name="description" content="Explore AJ's portfolio of web development projects including full-stack applications, mobile apps, and innovative solutions.">
+    <meta name="keywords" content="AJ projects, web development, full stack projects, portfolio">
+    <meta name="author" content="AJ">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-cyan': '#00ffff',
+                        'neon-indigo': '#6366f1',
+                        'neon-violet': '#8b5cf6',
+                        'glass-bg': 'rgba(255, 255, 255, 0.1)',
+                        'glass-border': 'rgba(255, 255, 255, 0.2)',
+                    },
+                    fontFamily: {
+                        'primary': ['Segoe UI', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    backdropBlur: {
+                        'glass': '10px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white font-primary overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-glass-bg backdrop-blur-glass border-b border-glass-border">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-neon-cyan glow-text">
+                    <i class="fas fa-code mr-2"></i>AJ
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="projects.html" class="nav-link active">Projects</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-neon-cyan transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 nav-link">Home</a>
+                <a href="about.html" class="block py-2 nav-link">About</a>
+                <a href="projects.html" class="block py-2 nav-link active">Projects</a>
+                <a href="blog.html" class="block py-2 nav-link">Blog</a>
+                <a href="gallery.html" class="block py-2 nav-link">Gallery</a>
+                <a href="contact.html" class="block py-2 nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-neon-violet glow-text">
+                    <i class="fas fa-laptop-code mr-4"></i>My Projects
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                    A showcase of my latest work in web development and software engineering
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th mr-2"></i>All Projects
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <i class="fas fa-globe mr-2"></i>Web Apps
+                </button>
+                <button class="filter-btn" data-filter="mobile">
+                    <i class="fas fa-mobile-alt mr-2"></i>Mobile
+                </button>
+                <button class="filter-btn" data-filter="ai">
+                    <i class="fas fa-robot mr-2"></i>AI/ML
+                </button>
+                <button class="filter-btn" data-filter="tools">
+                    <i class="fas fa-tools mr-2"></i>Tools
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" id="projects-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card scroll-reveal" data-category="web">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-shopping-cart text-6xl text-neon-cyan"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-neon-cyan">E-Commerce Platform</h3>
+                        <p class="text-gray-400 mb-4">
+                            Full-featured e-commerce platform with React frontend, Node.js backend, 
+                            payment integration, and admin dashboard.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-neon-cyan hover:text-white transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="text-neon-cyan hover:text-white transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <span class="status-badge bg-red-500/20 text-red-300">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card scroll-reveal" data-category="mobile">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-comments text-6xl text-neon-indigo"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-neon-indigo">Chat Application</h3>
+                        <p class="text-gray-400 mb-4">
+                            Real-time chat application with React Native frontend, Socket.io for 
+                            real-time messaging, and Firebase authentication.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Redux</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-neon-indigo hover:text-white transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="text-neon-indigo hover:text-white transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <span class="status-badge bg-red-500/20 text-red-300">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card scroll-reveal" data-category="ai">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-brain text-6xl text-neon-violet"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-neon-violet">AI Image Generator</h3>
+                        <p class="text-gray-400 mb-4">
+                            AI-powered image generation tool using OpenAI's DALL-E API with 
+                            React frontend and Python backend for image processing.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">OpenAI</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-neon-violet hover:text-white transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="text-neon-violet hover:text-white transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <span class="status-badge bg-red-500/20 text-red-300">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card scroll-reveal" data-category="web">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-tasks text-6xl text-neon-cyan"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-neon-cyan">Project Management Tool</h3>
+                        <p class="text-gray-400 mb-4">
+                            Collaborative project management platform with Kanban boards, 
+                            team collaboration features, and real-time updates.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Socket.io</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-neon-cyan hover:text-white transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="text-neon-cyan hover:text-white transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <span class="status-badge bg-red-500/20 text-red-300">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card scroll-reveal" data-category="tools">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-code-branch text-6xl text-neon-indigo"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-neon-indigo">Developer CLI Tool</h3>
+                        <p class="text-gray-400 mb-4">
+                            Command-line tool for developers to automate common tasks, 
+                            generate boilerplate code, and manage project templates.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Commander.js</span>
+                            <span class="tech-tag">Inquirer.js</span>
+                            <span class="tech-tag">NPM</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-neon-indigo hover:text-white transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="text-neon-indigo hover:text-white transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <span class="status-badge bg-red-500/20 text-red-300">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card scroll-reveal" data-category="web">
+                    <div class="project-image-placeholder">
+                        <i class="fas fa-chart-line text-6xl text-neon-violet"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-neon-violet">Analytics Dashboard</h3>
+                        <p class="text-gray-400 mb-4">
+                            Real-time analytics dashboard with interactive charts, 
+                            data visualization, and customizable widgets for business insights.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-neon-violet hover:text-white transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="text-neon-violet hover:text-white transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <span class="status-badge bg-red-500/20 text-red-300">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Stats Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-neon-cyan glow-text scroll-reveal">
+                <i class="fab fa-github mr-3"></i>GitHub Activity
+            </h2>
+            
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 text-center scroll-reveal">
+                    <div class="text-5xl font-bold text-neon-cyan mb-4">5+</div>
+                    <p class="text-xl text-gray-300">Public Repositories</p>
+                    <p class="text-sm text-gray-400 mt-2">Open source contributions</p>
+                </div>
+                
+                <div class="glass-card p-8 text-center scroll-reveal">
+                    <div class="text-5xl font-bold text-neon-indigo mb-4">10+</div>
+                    <p class="text-xl text-gray-300">Commits This Year</p>
+                    <p class="text-sm text-gray-400 mt-2">Consistent development</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 scroll-reveal">
+                <a href="https://github.com/CodeMaster-AJ" target="_blank" class="glass-button">
+                    <i class="fab fa-github mr-2"></i>View GitHub Profile
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-neon-violet glow-text scroll-reveal">
+                <i class="fas fa-layer-group mr-3"></i>Technologies Used
+            </h2>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-6">
+                    <div class="tech-icon-card scroll-reveal">
+                        <i class="fab fa-react text-4xl text-blue-400"></i>
+                        <span class="text-sm mt-2">React</span>
+                    </div>
+                    <div class="tech-icon-card scroll-reveal">
+                        <i class="fab fa-node-js text-4xl text-green-400"></i>
+                        <span class="text-sm mt-2">Node.js</span>
+                    </div>
+                    <div class="tech-icon-card scroll-reveal">
+                        <i class="fab fa-python text-4xl text-yellow-400"></i>
+                        <span class="text-sm mt-2">Python</span>
+                    </div>
+                    <div class="tech-icon-card scroll-reveal">
+                        <i class="fas fa-database text-4xl text-neon-cyan"></i>
+                        <span class="text-sm mt-2">MongoDB</span>
+                    </div>
+                    <div class="tech-icon-card scroll-reveal">
+                        <i class="fab fa-js-square text-4xl text-yellow-300"></i>
+                        <span class="text-sm mt-2">JavaScript</span>
+                    </div>
+                    <div class="tech-icon-card scroll-reveal">
+                        <i class="fab fa-html5 text-4xl text-orange-400"></i>
+                        <span class="text-sm mt-2">HTML5</span>
+                    </div>
+                    <div class="tech-icon-card scroll-reveal">
+                        <i class="fab fa-css3-alt text-4xl text-blue-400"></i>
+                        <span class="text-sm mt-2">CSS3</span>
+                    </div>
+                    <div class="tech-icon-card scroll-reveal">
+                        <i class="fab fa-git-alt text-4xl text-red-400"></i>
+                        <span class="text-sm mt-2">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="glass-card p-8 md:p-12 text-center max-w-4xl mx-auto scroll-reveal">
+                <h2 class="text-4xl font-bold mb-6 text-neon-cyan glow-text">
+                    <i class="fas fa-rocket mr-3"></i>Like What You See?
+                </h2>
+                <p class="text-lg text-gray-300 mb-8">
+                    Let's collaborate on your next project and bring your ideas to life!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="glass-button">
+                        <i class="fas fa-paper-plane mr-2"></i>Start a Project
+                    </a>
+                    <a href="about.html" class="glass-button-secondary">
+                        <i class="fas fa-user mr-2"></i>Learn More About Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-neon-cyan glow-text mb-2">
+                        <i class="fas fa-code mr-2"></i>AJ
+                    </div>
+                    <p class="text-gray-400">Code. Build. Repeat.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/CodeMaster-AJ" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/amandeep-singh-jadhav" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <!-- <a href="https://twitter.com/aj" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a> -->
+                    <a href="mailto:contact@example.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-gray-800">
+                <p class="text-gray-400">
+                    &copy; 2025 AJ. All rights reserved. | Built with ❤️ and modern web technologies
+                </p>
+                <p class="text-sm text-gray-500 mt-2">
+                    Press <kbd class="px-2 py-1 bg-gray-800 rounded text-neon-cyan">J</kbd> to open terminal
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Terminal Popup -->
+    <div id="terminal-popup" class="terminal-popup hidden">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="terminal-btn close" id="terminal-close"></span>
+                    <span class="terminal-btn minimize"></span>
+                    <span class="terminal-btn maximize"></span>
+                </div>
+                <div class="terminal-title">Terminal - AJ's Portfolio</div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-line">
+                    <span class="terminal-prompt">visitor@aj-portfolio:~$</span>
+                    <span class="terminal-cursor"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/special-effects.js"></script>
+</body>
+</html>

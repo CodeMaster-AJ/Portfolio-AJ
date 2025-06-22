@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ - 🚀 Upcoming Developer | AIML @2028</title>
+    <meta name="description" content="Amandeep Singh Jadhav (AJ) - Former YouTuber turned developer. Building cool stuff that makes people go 'Damn, who built this?'">
+    <meta name="keywords" content="AJ, Amandeep Singh Jadhav, developer, YouTuber, Buyzzle, UniBuddy, Akal University">
+    <meta name="author" content="Amandeep Singh Jadhav (AJ)">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/profile-image-fix.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-cyan': '#00ffff',
+                        'neon-indigo': '#6366f1',
+                        'neon-violet': '#8b5cf6',
+                        'glass-bg': 'rgba(255, 255, 255, 0.1)',
+                        'glass-border': 'rgba(255, 255, 255, 0.2)',
+                    },
+                    fontFamily: {
+                        'primary': ['Segoe UI', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    backdropBlur: {
+                        'glass': '10px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white font-primary overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-glass-bg backdrop-blur-glass border-b border-glass-border">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-neon-cyan glow-text">
+                    <i class="fas fa-code mr-2"></i>AJ
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-neon-cyan transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 nav-link active">Home</a>
+                <a href="about.html" class="block py-2 nav-link">About</a>
+                <a href="projects.html" class="block py-2 nav-link">Projects</a>
+                <a href="blog.html" class="block py-2 nav-link">Blog</a>
+                <a href="gallery.html" class="block py-2 nav-link">Gallery</a>
+                <a href="contact.html" class="block py-2 nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 z-0">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center z-10 relative hero-3d">
+            <div class="animate-fade-in hero-content-3d">
+                <h1 class="text-6xl md:text-8xl font-bold mb-4 typing-animation">
+                    Hey, I'm <span class="text-neon-cyan subtle-glow">AJ</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-4 slide-up-animation">
+                    <span class="text-neon-violet subtle-glow">🚀 Upcoming Developer</span> | <span class="text-neon-indigo subtle-glow">AIML @2028</span>
+                </p>
+                <p class="text-lg text-gray-400 mb-8 slide-up-animation italic">
+                    "Failed with 650K subs, but built something better: ME."
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center slide-up-animation-delayed">
+                    <a href="projects.html" class="glass-button">
+                        <i class="fas fa-rocket mr-2"></i>Explore My World
+                    </a>
+                    <a href="about.html" class="glass-button-secondary">
+                        <i class="fas fa-user-astronaut mr-2"></i>About AJ
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-neon-cyan text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Profile Card Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Profile Card -->
+                <div class="glass-card p-8 scroll-reveal floating-3d">
+                    <div class="text-center mb-6 card-3d-content">
+                      <div class="profile-image-placeholder mx-auto mb-4">
+                          <a href="https://postimages.org/" target="_blank">
+                              <img src="https://i.postimg.cc/8cBC8WmZ/My-profile-pic.jpg" alt="My Profile Pic"
+                                   class="w-32 h-32 rounded-full object-cover border-4 border-neon-cyan shadow-md hover:scale-105 transition-transform duration-300" />
+                          </a>
+                      </div>
+                        <h2 class="text-3xl font-bold mb-2 text-neon-cyan subtle-glow">Amandeep Singh Jadhav</h2>
+                        <p class="text-lg text-gray-300 mb-4">aka <span class="text-neon-violet font-bold">AJ</span></p>
+                        <div class="bg-gray-800/50 rounded-lg p-4 mb-4">
+                            <p class="text-sm text-gray-400 mb-2">
+                                <i class="fas fa-graduation-cap text-neon-indigo mr-2"></i>
+                                BTech CSE with AIML @ <span class="text-neon-cyan">Akal University, Punjab</span>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tags/Roles -->
+                    <div class="grid grid-cols-2 gap-3 mb-6">
+                        <div class="bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 rounded-lg p-3 text-center">
+                            <i class="fas fa-palette text-pink-400 mb-1"></i>
+                            <p class="text-sm font-semibold">Canva Pro Designer 🎨</p>
+                        </div>
+                        <div class="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-lg p-3 text-center">
+                            <i class="fas fa-pen-fancy text-blue-400 mb-1"></i>
+                            <p class="text-sm font-semibold">SEO Writer ✍️</p>
+                        </div>
+                        <div class="bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 rounded-lg p-3 text-center">
+                            <i class="fas fa-video text-red-400 mb-1"></i>
+                            <p class="text-sm font-semibold">Video Editor 🎬</p>
+                        </div>
+                        <div class="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-lg p-3 text-center">
+                            <i class="fas fa-rocket text-green-400 mb-1"></i>
+                            <p class="text-sm font-semibold">Startup Co-Founder 🚀</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Status -->
+                    <div class="text-center">
+                        <span class="inline-flex items-center px-4 py-2 bg-green-500/20 text-green-300 rounded-full">
+                            <span class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></span>
+                            Building Cool Stuff
+                        </span>
+                    </div>
+                </div>
+
+                <!-- About Content -->
+                <div class="space-y-6 scroll-reveal">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6 text-neon-violet subtle-glow">
+                            <i class="fas fa-user-circle mr-3"></i>Meet the Mind Behind the Code
+                        </h2>
+                        <div class="space-y-6 text-gray-300 leading-relaxed">
+                            <div class="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-lg p-6 border border-purple-500/20">
+                                <h3 class="text-xl font-bold text-neon-cyan mb-3">The Journey So Far</h3>
+                                <p class="text-gray-300">
+                                    Started as a content creator with 650K+ YouTube subscribers, creating videos that resonated with thousands. 
+                                    But I realized my true passion lies in building digital experiences that solve real problems.
+                                </p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-blue-500/10 to-green-500/10 rounded-lg p-6 border border-blue-500/20">
+                                <h3 class="text-xl font-bold text-neon-indigo mb-3">The Transformation</h3>
+                                <p class="text-gray-300">
+                                    Now pursuing BTech in Computer Science with AI/ML at Akal University, Punjab. 
+                                    Combining my creative background with technical skills to build innovative solutions like Buyzzle and UniBuddy.
+                                </p>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-pink-500/10 to-orange-500/10 rounded-lg p-6 border border-pink-500/20">
+                                <h3 class="text-xl font-bold text-neon-violet mb-3">The Vision</h3>
+                                <p class="text-gray-300">
+                                    Building cool stuff that makes people go "Damn, who built this?" 
+                                    Merging creativity, technology, and user experience to create memorable digital products.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 text-neon-cyan subtle-glow">
+                            <i class="fas fa-code mr-2"></i>Current Tech Stack
+                        </h3>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">Flutter Flow</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-tag">Tailwind CSS</span>
+                                <span class="skill-tag">Canva Design</span>
+                                <span class="skill-tag">Video Editing</span>
+                                <span class="skill-tag">Content Creation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Preview -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-neon-violet subtle-glow scroll-reveal">
+                <i class="fas fa-rocket mr-3"></i>My Digital repository
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Buyzzle Project -->
+                <div class="project-card scroll-reveal floating-3d">
+                    <div class="project-image-placeholder bg-gradient-to-br from-purple-600 to-pink-600">
+                        <i class="fas fa-shopping-bag text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6 card-3d-content">
+                        <h3 class="text-xl font-bold mb-3 text-neon-violet">Buyzzle</h3>
+                        <p class="text-gray-400 mb-4">AI + shopping = chaos and genius combined. Smart shopping platform that learns your preferences.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Full Stack</span>
+                            <span class="tech-tag">Smart Algorithms</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-neon-violet hover:text-white transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="text-neon-violet hover:text-white transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <span class="status-badge bg-blue-500/20 text-blue-300">In Progress</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- UniBuddy Project -->
+                <div class="project-card scroll-reveal floating-3d" style="animation-delay: 2s;">
+                    <div class="project-image-placeholder bg-gradient-to-br from-cyan-600 to-blue-600">
+                        <i class="fas fa-graduation-cap text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6 card-3d-content">
+                        <h3 class="text-xl font-bold mb-3 text-neon-cyan">UniBuddy</h3>
+                        <p class="text-gray-400 mb-4">A utility app that helps students survive college. Because we've all been there!</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Student Life</span>
+                            <span class="tech-tag">Utility App</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-neon-cyan hover:text-white transition-colors">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="text-neon-cyan hover:text-white transition-colors">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                            <span class="status-badge bg-red-500/20 text-red-400">Upcoming</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Skills/Projects Row -->
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+                <div class="glass-card p-6 text-center scroll-reveal">
+                    <i class="fas fa-video text-3xl text-red-400 mb-3"></i>
+                    <h4 class="text-lg font-bold text-red-300 mb-2">Content Creation</h4>
+                    <p class="text-sm text-gray-400">650K+ YouTube journey, scriptwriting, video editing</p>
+                </div>
+                <div class="glass-card p-6 text-center scroll-reveal">
+                    <i class="fas fa-palette text-3xl text-pink-400 mb-3"></i>
+                    <h4 class="text-lg font-bold text-pink-300 mb-2">Design Magic</h4>
+                    <p class="text-sm text-gray-400">Canva Pro designs, brand building, visual storytelling</p>
+                </div>
+                <div class="glass-card p-6 text-center scroll-reveal">
+                    <i class="fas fa-brain text-3xl text-purple-400 mb-3"></i>
+                    <h4 class="text-lg font-bold text-purple-300 mb-2">AI Exploration</h4>
+                    <p class="text-sm text-gray-400">Machine learning, AIML specialization, future tech</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 scroll-reveal">
+                <a href="projects.html" class="glass-button">
+                    <i class="fas fa-arrow-right mr-2"></i>Explore Everything
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="glass-card p-8 md:p-12 text-center max-w-4xl mx-auto scroll-reveal relative overflow-hidden">
+                <!-- Background effect -->
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-cyan-500/10 to-pink-500/10 animate-pulse"></div>
+                
+                <div class="relative z-10">
+                    <h2 class="text-4xl font-bold mb-6 text-neon-cyan subtle-glow">
+                        <i class="fas fa-handshake mr-3"></i>Ready to Build Something Epic?
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-4">
+                        Got a wild idea? Need a developer who thinks outside the box?
+                    </p>
+                    <p class="text-xl font-bold text-neon-violet mb-8">
+                        Let's make people go: <span class="text-neon-cyan">"Damn, who built this?"</span>
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="contact.html" class="glass-button">
+                            <i class="fas fa-rocket mr-2"></i>Let's Connect
+                        </a>
+                        <a href="mailto:aj.auts2024@gmail.com" class="glass-button-secondary">
+                            <i class="fas fa-paper-plane mr-2"></i>Drop a Message
+                        </a>
+                    </div>
+                    
+                    <!-- Fun Stats -->
+                    <div class="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-gray-700">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-neon-cyan">650K+</div>
+                            <div class="text-sm text-gray-400">YouTube Journey</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-neon-violet">∞</div>
+                            <div class="text-sm text-gray-400">Creative Ideas</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-neon-indigo">24/7</div>
+                            <div class="text-sm text-gray-400">Building Mode</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-neon-cyan glow-text mb-2">
+                        <i class="fas fa-code mr-2"></i>AJ
+                    </div>
+                    <p class="text-gray-400">Code. Build. Repeat.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/CodeMaster-AJ" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/amandeep-singh-jadhav" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <!-- <a href="https://twitter.com/aj" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i> -->
+                    </a>
+                    <a href="mailto:aj.auts2024@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-gray-800">
+                <p class="text-gray-400">
+                    &copy; 2025 AJ. All rights reserved. | Built with ❤️ and modern web technologies
+                </p>
+                <p class="text-sm text-gray-500 mt-2">
+                    Press <kbd class="px-2 py-1 bg-gray-800 rounded text-neon-cyan">J</kbd> to access the matrix | 
+                    Try the <kbd class="px-2 py-1 bg-gray-800 rounded text-neon-violet">Konami Code</kbd> for a surprise
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Terminal Popup -->
+    <div id="terminal-popup" class="terminal-popup hidden">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="terminal-btn close" id="terminal-close"></span>
+                    <span class="terminal-btn minimize"></span>
+                    <span class="terminal-btn maximize"></span>
+                </div>
+                <div class="terminal-title">Terminal - AJ's Portfolio</div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-line">
+                    <span class="terminal-prompt">visitor@aj-portfolio:~$</span>
+                    <span class="terminal-cursor"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/special-effects.js"></script>
+</body>
+</html>

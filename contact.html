@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact AJ - Full Stack Developer | CodeMaster-AJ</title>
+    <meta name="description" content="Get in touch with AJ for web development projects, collaborations, or just to say hello. Let's build something amazing together!">
+    <meta name="keywords" content="contact AJ, web developer contact, hire developer, project collaboration">
+    <meta name="author" content="AJ">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-cyan': '#00ffff',
+                        'neon-indigo': '#6366f1',
+                        'neon-violet': '#8b5cf6',
+                        'glass-bg': 'rgba(255, 255, 255, 0.1)',
+                        'glass-border': 'rgba(255, 255, 255, 0.2)',
+                    },
+                    fontFamily: {
+                        'primary': ['Segoe UI', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    backdropBlur: {
+                        'glass': '10px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white font-primary overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-glass-bg backdrop-blur-glass border-b border-glass-border">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-neon-cyan glow-text">
+                    <i class="fas fa-code mr-2"></i>AJ
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-neon-cyan transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 nav-link">Home</a>
+                <a href="about.html" class="block py-2 nav-link">About</a>
+                <a href="projects.html" class="block py-2 nav-link">Projects</a>
+                <a href="blog.html" class="block py-2 nav-link">Blog</a>
+                <a href="gallery.html" class="block py-2 nav-link">Gallery</a>
+                <a href="contact.html" class="block py-2 nav-link active">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-neon-cyan glow-text">
+                    <i class="fas fa-paper-plane mr-4"></i>Get In Touch
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                    Let's collaborate and bring your ideas to life
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+                
+                <!-- Contact Form -->
+                <div class="glass-card p-8 scroll-reveal">
+                    <h2 class="text-3xl font-bold mb-8 text-neon-indigo glow-text">
+                        <i class="fas fa-envelope mr-3"></i>Send Me a Message
+                    </h2>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">
+                                    <i class="fas fa-user mr-2"></i>First Name
+                                </label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                <div class="form-error" id="firstName-error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">
+                                    <i class="fas fa-user mr-2"></i>Last Name
+                                </label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                <div class="form-error" id="lastName-error"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                <i class="fas fa-envelope mr-2"></i>Email Address
+                            </label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                            <div class="form-error" id="email-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">
+                                <i class="fas fa-tag mr-2"></i>Subject
+                            </label>
+                            <select id="subject" name="subject" class="form-input" required>
+                                <option value="">Select a subject</option>
+                                <option value="project">Project Inquiry</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="job">Job Opportunity</option>
+                                <option value="question">General Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="form-error" id="subject-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">
+                                <i class="fas fa-comment-alt mr-2"></i>Message
+                            </label>
+                            <textarea id="message" name="message" rows="6" class="form-input" placeholder="Tell me about your project or question..." required></textarea>
+                            <div class="form-error" id="message-error"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox">
+                                <span class="ml-3 text-gray-300">
+                                    I'd like to receive updates about new projects and blog posts
+                                </span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="glass-button w-full" id="submit-btn">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            <span id="submit-text">Send Message</span>
+                        </button>
+                    </form>
+                    
+                    <!-- Success/Error Messages -->
+                    <div id="form-message" class="mt-6 hidden"></div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <!-- Contact Cards -->
+                    <div class="glass-card p-8 scroll-reveal">
+                        <h2 class="text-3xl font-bold mb-8 text-neon-violet glow-text">
+                            <i class="fas fa-address-card mr-3"></i>Contact Information
+                        </h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="contact-icon bg-neon-cyan/20 text-neon-cyan">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-lg">Email</h3>
+                                    <p class="text-gray-400">aj.auts2024@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="contact-icon bg-neon-indigo/20 text-neon-indigo">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-lg">WhatsApp</h3>
+                                    <a href="https://wa.me/919584220420" target="_blank" class="text-gray-400 hover:text-neon-indigo transition-colors">+91 9584220420</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="contact-icon bg-neon-violet/20 text-neon-violet">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-lg">Location</h3>
+                                    <p class="text-gray-400">Available Worldwide</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="contact-icon bg-green-500/20 text-green-400">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-lg">Response Time</h3>
+                                    <p class="text-gray-400">Usually within 24 hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="glass-card p-8 scroll-reveal">
+                        <h3 class="text-2xl font-bold mb-6 text-neon-cyan">
+                            <i class="fas fa-share-alt mr-3"></i>Connect With Me
+                        </h3>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <a href="https://github.com/CodeMaster-AJ" target="_blank" class="social-card">
+                                <i class="fab fa-github text-2xl"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com/in/aj" target="_blank" class="social-card">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://twitter.com/aj" target="_blank" class="social-card">
+                                <i class="fab fa-twitter text-2xl"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="mailto:aj.auts2024@gmail.com" class="social-card">
+                                <i class="fas fa-envelope text-2xl"></i>
+                                <span>Email</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Availability -->
+                    <div class="glass-card p-8 scroll-reveal">
+                        <h3 class="text-2xl font-bold mb-6 text-neon-indigo">
+                            <i class="fas fa-calendar-check mr-3"></i>Current Availability
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300">Freelance Projects</span>
+                                <span class="status-badge bg-green-500/20 text-green-300">
+                                    <i class="fas fa-check-circle mr-1"></i>Available
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300">Full-time Opportunities</span>
+                                <span class="status-badge bg-yellow-500/20 text-yellow-300">
+                                    <i class="fas fa-clock mr-1"></i>Open to Discuss
+                                </span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300">Consultations</span>
+                                <span class="status-badge bg-green-500/20 text-green-300">
+                                    <i class="fas fa-check-circle mr-1"></i>Available
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 pt-6 border-t border-gray-700">
+                            <p class="text-sm text-gray-400">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Looking for long-term partnerships and exciting projects. 
+                                Let's discuss how we can work together!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 text-neon-violet glow-text scroll-reveal">
+                <i class="fas fa-question-circle mr-3"></i>Frequently Asked Questions
+            </h2>
+            
+            <div class="max-w-4xl mx-auto space-y-6">
+                <div class="faq-item glass-card p-6 scroll-reveal">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <span class="text-lg font-semibold">What types of projects do you work on?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-300">
+                        I specialize in full-stack web applications, mobile apps, e-commerce platforms, 
+                        and custom software solutions. I work with modern technologies like React, Node.js, 
+                        Python, and various databases to create scalable and user-friendly applications.
+                    </div>
+                </div>
+                
+                <div class="faq-item glass-card p-6 scroll-reveal">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <span class="text-lg font-semibold">What's your typical project timeline?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-300">
+                        Project timelines vary based on complexity and requirements. Simple websites take 1-2 weeks, 
+                        while complex web applications can take 4-12 weeks. I provide detailed timelines during 
+                        the initial consultation and keep you updated throughout the development process.
+                    </div>
+                </div>
+                
+                <div class="faq-item glass-card p-6 scroll-reveal">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <span class="text-lg font-semibold">Do you provide ongoing support and maintenance?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-300">
+                        Yes! I offer ongoing support and maintenance packages to ensure your application 
+                        stays updated, secure, and performing optimally. This includes bug fixes, 
+                        security updates, and feature enhancements as needed.
+                    </div>
+                </div>
+                
+                <div class="faq-item glass-card p-6 scroll-reveal">
+                    <button class="faq-question w-full text-left flex justify-between items-center">
+                        <span class="text-lg font-semibold">How do you handle project communication?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden mt-4 text-gray-300">
+                        I believe in transparent communication throughout the project. I provide regular updates, 
+                        use project management tools for tracking progress, and am available for calls or meetings 
+                        as needed. You'll always know the current status of your project.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-neon-cyan glow-text mb-2">
+                        <i class="fas fa-code mr-2"></i>AJ
+                    </div>
+                    <p class="text-gray-400">Full Stack Developer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/CodeMaster-AJ" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/aj" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/aj" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="mailto:contact@example.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-gray-800">
+                <p class="text-gray-400">
+                    &copy; 2025 AJ. All rights reserved. | Built with ❤️ and modern web technologies
+                </p>
+                <p class="text-sm text-gray-500 mt-2">
+                    Press <kbd class="px-2 py-1 bg-gray-800 rounded text-neon-cyan">J</kbd> to open terminal
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Terminal Popup -->
+    <div id="terminal-popup" class="terminal-popup hidden">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="terminal-btn close" id="terminal-close"></span>
+                    <span class="terminal-btn minimize"></span>
+                    <span class="terminal-btn maximize"></span>
+                </div>
+                <div class="terminal-title">Terminal - AJ's Portfolio</div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-line">
+                    <span class="terminal-prompt">visitor@aj-portfolio:~$</span>
+                    <span class="terminal-cursor"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/special-effects.js"></script>
+</body>
+</html>

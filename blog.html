@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - AJ's Digital Thoughts | Amandeep Singh Jadhav</title>
+    <meta name="description" content="Read AJ's thoughts on development, content creation, startup journey, and tech insights from a former YouTuber turned developer.">
+    <meta name="keywords" content="AJ blog, development insights, content creation, startup journey, tech thoughts, Amandeep Singh Jadhav">
+    <meta name="author" content="Amandeep Singh Jadhav (AJ)">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-cyan': '#00ffff',
+                        'neon-indigo': '#6366f1',
+                        'neon-violet': '#8b5cf6',
+                        'glass-bg': 'rgba(255, 255, 255, 0.1)',
+                        'glass-border': 'rgba(255, 255, 255, 0.2)',
+                    },
+                    fontFamily: {
+                        'primary': ['Segoe UI', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    backdropBlur: {
+                        'glass': '10px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white font-primary overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-glass-bg backdrop-blur-glass border-b border-glass-border">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-neon-cyan glow-text">
+                    <i class="fas fa-code mr-2"></i>AJ
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                    <a href="gallery.html" class="nav-link">Gallery</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-white hover:text-neon-cyan transition-colors">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 nav-link">Home</a>
+                <a href="about.html" class="block py-2 nav-link">About</a>
+                <a href="projects.html" class="block py-2 nav-link">Projects</a>
+                <a href="blog.html" class="block py-2 nav-link active">Blog</a>
+                <a href="gallery.html" class="block py-2 nav-link">Gallery</a>
+                <a href="contact.html" class="block py-2 nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-neon-violet subtle-glow">
+                    <i class="fas fa-blog mr-4"></i>Digital Thoughts
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                    From 650K YouTube subscriber to developer. Here's what I've learned on this <span class="text-neon-cyan font-bold">chaotic journey</span>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-card p-8 md:p-12 scroll-reveal floating-3d">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-gradient-to-r from-red-500 to-pink-500 rounded-full p-3 mr-4">
+                            <i class="fas fa-fire text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <span class="text-sm text-red-400 font-semibold">FEATURED POST</span>
+                            <h2 class="text-2xl md:text-3xl font-bold text-neon-cyan">From 650K Subs to Code: My Reset Story</h2>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Everyone asks: "Why did you leave YouTube?" The truth? I didn't fail with 650K subscribers. 
+                        I realized my true passion wasn't in creating content about others' work—it was in building something myself. 
+                        This is the story of pressing reset and choosing the harder but more fulfilling path of becoming a developer.
+                    </p>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4 text-sm text-gray-400">
+                            <span><i class="fas fa-calendar mr-1"></i>Dec 2024</span>
+                            <span><i class="fas fa-clock mr-1"></i>8 min read</span>
+                            <span><i class="fas fa-eye mr-1"></i>1.2K views</span>
+                        </div>
+                        <button class="glass-button">
+                            <i class="fas fa-arrow-right mr-2"></i>Read Full Story
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th mr-2"></i>All Posts
+                </button>
+                <button class="filter-btn" data-filter="development">
+                    <i class="fas fa-code mr-2"></i>Development
+                </button>
+                <button class="filter-btn" data-filter="content">
+                    <i class="fas fa-video mr-2"></i>Content Creation
+                </button>
+                <button class="filter-btn" data-filter="startup">
+                    <i class="fas fa-rocket mr-2"></i>Startup Journey
+                </button>
+                <button class="filter-btn" data-filter="thoughts">
+                    <i class="fas fa-lightbulb mr-2"></i>Random Thoughts
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" id="blog-grid">
+                
+                <!-- Blog Post 1 -->
+                <article class="glass-card overflow-hidden scroll-reveal floating-3d" data-category="development">
+                    <div class="h-48 bg-gradient-to-br from-cyan-600 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-code text-5xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="px-3 py-1 text-xs bg-cyan-500/20 text-cyan-300 rounded-full">Development</span>
+                            <span class="text-xs text-gray-500 ml-3">Jan 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white hover:text-neon-cyan transition-colors cursor-pointer">
+                            Why I Chose Flutter Over React Native
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Building Buyzzle and UniBuddy taught me the real differences between these frameworks. Here's my honest comparison.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">5 min read</span>
+                            <button class="text-neon-cyan hover:text-white transition-colors">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="glass-card overflow-hidden scroll-reveal floating-3d" data-category="content" style="animation-delay: 1s;">
+                    <div class="h-48 bg-gradient-to-br from-red-600 to-pink-600 flex items-center justify-center">
+                        <i class="fab fa-youtube text-5xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="px-3 py-1 text-xs bg-red-500/20 text-red-300 rounded-full">Content Creation</span>
+                            <span class="text-xs text-gray-500 ml-3">Dec 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white hover:text-neon-cyan transition-colors cursor-pointer">
+                            The YouTube Algorithm Myth
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            After 650K subscribers, here's what I really learned about the algorithm and why it's not what you think.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">7 min read</span>
+                            <button class="text-neon-cyan hover:text-white transition-colors">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="glass-card overflow-hidden scroll-reveal floating-3d" data-category="startup" style="animation-delay: 2s;">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center">
+                        <i class="fas fa-rocket text-5xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="px-3 py-1 text-xs bg-purple-500/20 text-purple-300 rounded-full">Startup</span>
+                            <span class="text-xs text-gray-500 ml-3">Nov 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white hover:text-neon-cyan transition-colors cursor-pointer">
+                            Building Buyzzle: AI Shopping Done Right
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            How we're solving the chaos in online shopping with AI that actually understands what you want.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">6 min read</span>
+                            <button class="text-neon-cyan hover:text-white transition-colors">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="glass-card overflow-hidden scroll-reveal floating-3d" data-category="thoughts" style="animation-delay: 3s;">
+                    <div class="h-48 bg-gradient-to-br from-green-600 to-teal-600 flex items-center justify-center">
+                        <i class="fas fa-brain text-5xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="px-3 py-1 text-xs bg-green-500/20 text-green-300 rounded-full">Thoughts</span>
+                            <span class="text-xs text-gray-500 ml-3">Oct 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white hover:text-neon-cyan transition-colors cursor-pointer">
+                            The College Student's Dilemma
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Why UniBuddy exists: the problems every college student faces but nobody talks about.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">4 min read</span>
+                            <button class="text-neon-cyan hover:text-white transition-colors">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="glass-card overflow-hidden scroll-reveal floating-3d" data-category="development" style="animation-delay: 4s;">
+                    <div class="h-48 bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center">
+                        <i class="fas fa-palette text-5xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="px-3 py-1 text-xs bg-orange-500/20 text-orange-300 rounded-full">Development</span>
+                            <span class="text-xs text-gray-500 ml-3">Sep 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white hover:text-neon-cyan transition-colors cursor-pointer">
+                            Design Systems That Don't Suck
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            From Canva Pro to custom design systems: what I learned about creating consistent UI/UX.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">8 min read</span>
+                            <button class="text-neon-cyan hover:text-white transition-colors">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="glass-card overflow-hidden scroll-reveal floating-3d" data-category="thoughts" style="animation-delay: 5s;">
+                    <div class="h-48 bg-gradient-to-br from-pink-600 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-quote-left text-5xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="px-3 py-1 text-xs bg-pink-500/20 text-pink-300 rounded-full">Thoughts</span>
+                            <span class="text-xs text-gray-500 ml-3">Aug 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white hover:text-neon-cyan transition-colors cursor-pointer">
+                            Lessons from a Chaotic Mind
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Random thoughts on creativity, focus, and why having a "chaotic mind" might actually be a superpower.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">3 min read</span>
+                            <button class="text-neon-cyan hover:text-white transition-colors">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="glass-card p-8 md:p-12 text-center max-w-4xl mx-auto scroll-reveal">
+                <h2 class="text-4xl font-bold mb-6 text-neon-violet subtle-glow">
+                    <i class="fas fa-paper-plane mr-3"></i>Stay in the Loop
+                </h2>
+                <p class="text-lg text-gray-300 mb-8">
+                    Get notified when I drop new content about development, startups, and the occasional chaotic thought.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+                    <input 
+                        type="email" 
+                        placeholder="Your email address" 
+                        class="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-neon-cyan"
+                    >
+                    <button class="glass-button whitespace-nowrap">
+                        <i class="fas fa-bell mr-2"></i>Subscribe
+                    </button>
+                </div>
+                <p class="text-xs text-gray-500 mt-4">No spam, just quality content. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-neon-cyan glow-text mb-2">
+                        <i class="fas fa-code mr-2"></i>AJ
+                    </div>
+                    <p class="text-gray-400">Code. Build. Repeat.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/CodeMaster-AJ" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/aj" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <!-- <a href="https://twitter.com/aj" target="_blank" class="social-link">
+                        <i class="fab fa-twitter"></i>
+                    </a> -->
+                    <a href="mailto:aj.auts2024@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-8 pt-8 border-t border-gray-800">
+                <p class="text-gray-400">
+                    &copy; 2025 AJ. All rights reserved. | Built with ❤️ and modern web technologies
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Terminal Popup -->
+    <div id="terminal-popup" class="terminal-popup hidden">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="terminal-btn close" id="terminal-close"></span>
+                    <span class="terminal-btn minimize"></span>
+                    <span class="terminal-btn maximize"></span>
+                </div>
+                <div class="terminal-title">Terminal - AJ's Portfolio</div>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+                <div class="terminal-line">
+                    <span class="terminal-prompt">visitor@aj-portfolio:~$</span>
+                    <span class="terminal-cursor"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/terminal.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/special-effects.js"></script>
+</body>
+</html>
